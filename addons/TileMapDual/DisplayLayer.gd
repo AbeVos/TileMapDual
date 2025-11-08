@@ -47,11 +47,13 @@ func update_properties(parent: TileMapDual) -> void:
 	self.x_draw_order_reversed = parent.x_draw_order_reversed
 	self.rendering_quadrant_size = parent.rendering_quadrant_size
 	# Physics
-	self.collision_enabled = parent.collision_enabled
+	# self.collision_enabled = parent.collision_enabled
+	self.collision_enabled = not parent.collision_enabled
 	self.use_kinematic_bodies = parent.use_kinematic_bodies
 	self.collision_visibility_mode = parent.collision_visibility_mode
 	# Navigation
 	self.navigation_enabled = parent.navigation_enabled
+	# self.navigation_enabled = not parent.navigation_enabled
 	self.navigation_visibility_mode = parent.navigation_visibility_mode
 	# Canvas item properties
 	self.show_behind_parent = parent.show_behind_parent
